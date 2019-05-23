@@ -18,14 +18,14 @@ class School
   def add_student(student_name,grade)
     # @roster[grade] ||= []
     # @roster[grade] ||@roster[grade]=[]
-    # @roster[grade] ? @roster[grade] : @roster[grade] = []
-    #a||=b
-     if @roster[grade] 
-       then @roster[grade] 
-       else @roster[grade] = [] 
+     @roster[grade] ? @roster[grade] : @roster[grade] = []
+    # #a||=b
+    # if @roster[grade] 
+    #   then @roster[grade] 
+    #   else @roster[grade] = [] 
       
-      end 
-     @roster[grade] << student_name
+    #   end 
+    # @roster[grade] << student_name
   end 
   
   def grade(student_name)
