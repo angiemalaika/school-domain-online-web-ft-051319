@@ -1,13 +1,20 @@
 class School 
-  attr_accessor :roster
-  attr_reader :grade
+  attr_accessor :roster  #attribute 
+  # attr_reader :grade  Instances of a school 
   
   def initialize(name)
-    @name
+    
+    @name = name 
     @roster = {} 
+
     # roster should be an empty hash upon initialization with roster = {grade:["student_name"]}
   end 
+ # highschool1 = School.new("hamilton","Chandler")
+  #highschool1.name=>"hamilton"
+  #highschool1.city=>"chandler"
+  #highschool1.roster=>{}
   
+
   def add_student(student_name,grade)
     # @roster[grade] ||= []
     # @roster[grade] ||@roster[grade]=[]
@@ -16,6 +23,7 @@ class School
      if @roster[grade] 
        then @roster[grade] 
        else @roster[grade] = [] 
+      
       end 
      @roster[grade] << student_name
   end 
@@ -26,10 +34,13 @@ class School
 
   def sort
     @roster.each do |grade, student|
-      student.sort!
+      student.sort
+      
     end
   end 
 end 
+
+
   # {"key1": [
   #   "value1",
   #   "value2",
